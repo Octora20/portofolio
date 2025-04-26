@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyPortfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">Bang Jo</div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <ul id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Hero Section -->
+<section class="home" id="home">
+    <div class="home-content">
+        <span class="intro-text"> Hello,</span>
+        <h1>I'm Yohan Octora Ramadhani</h1>
+        <p>Iseng Developer & Enjoy Living</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/octoramadhan_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://github.com/Octora20" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <a href="#" class="download-btn" onclick="alert('Sorry, CV is not available yet.');">Download CV</a>
+    </div>
+  </section>
+  
+  
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>Halo, teman-teman! Namaku Yohan Octora Ramadhani, tapi kalian bisa panggil aku Bang Jo.</p>
+    <p>Sedikit tentang aku yaa — ga bisa dibilang full-time developer, tapi aku suka ngulik dan ngoding di waktu senggang. Menurutku, ngembangin sesuatu secara iseng tapi bermanfaat itu seru banget. Santai, tapi yang penting happy dan tetap berkembang!</p>
+  
+    <!-- Additional Menu -->
+<div class="menu">
+    <h3>My Playlist</h3>
+    <ul>
+      <li>
+        <a href="https://open.spotify.com/playlist/5Qgib7nC9iL05nxwivRmVL?si=yfsxXKLpRUCkzsF9flav7w" target="_blank">
+          <div class="music-card">
+            <img src="assets/playlist1.jpg" alt="Album Cover" class="music-card-img">
+            <div class="music-card-info">
+              <h4>My Playlist 1</h4>
+              <p>Click to listen to my playlist on Spotify</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://open.spotify.com/playlist/70zBo8L9c95glK6xInuzP8?si=oKyrNMIjTo-sBf9yxMDQ4w" target="_blank">
+          <div class="music-card">
+            <img src="assets/playlist2.jpg" alt="Album Cover" class="music-card-img">
+            <div class="music-card-info">
+              <h4>My Playlist 2</h4>
+              <p>Click to listen to my playlist on Spotify</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://open.spotify.com/playlist/5ogNqMqJbpTY43WYsL5tK5?si=GE4udkghTJ-hI2oXNWN1sg" target="_blank">
+          <div class="music-card">
+            <img src="assets/playlist3.jpg" alt="Album Cover" class="music-card-img">
+            <div class="music-card-info">
+              <h4>My Playlist 3</h4>
+              <p>Click to listen to my playlist on Spotify</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://open.spotify.com/playlist/243XBK69J7fmwHVnai8ajv?si=J3W0xGuvSoG1b790WOe7ZQ" target="_blank">
+          <div class="music-card">
+            <img src="assets/playlist4.jpg" alt="Album Cover" class="music-card-img">
+            <div class="music-card-info">
+              <h4>My Playlist 4</h4>
+              <p>Click to listen to my playlist on Spotify</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://open.spotify.com/playlist/0s6opkFAojZGW05RgcB4gy?si=7c9g83ZaSJOgu7ml77ULuQ" target="_blank">
+          <div class="music-card">
+            <img src="assets/playlist5.jpg" alt="Album Cover" class="music-card-img">
+            <div class="music-card-info">
+              <h4>My Playlist 5</h4>
+              <p>Click to listen to my playlist on Spotify</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  
+    <!-- Hobbies Section
+    <div id="hobbies" class="hobbies">
+      <h3>My Hobbies</h3>
+      <p>Beberapa hobiku antara lain coding, bermain game, dan mendengarkan musik. Aku suka mengeksplorasi berbagai genre musik di Spotify dan menonton film-film seru di waktu luang.</p>
+    </div>
+  </section> -->
+  
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+        <span>Minum Coffee</span>
+        <div class="bar">
+            <div class="fill" data-percent="95%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>Main Game</span>
+        <div class="bar">
+            <div class="fill" data-percent="80%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>HTML</span>
+        <div class="bar">
+            <div class="fill" data-percent="40%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>CSS</span>
+        <div class="bar">
+            <div class="fill" data-percent="35%"></div>
+        </div>
+    </div>
+    
+    <div class="skill">
+        <span>JavaScript</span>
+        <div class="bar">
+            <div class="fill" data-percent="10%"></div>
+        </div>
+    </div>
+    
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div id="status"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <hr class="footer-line">
+    <div class="footer-content">
+      <div>
+        Yohan Octora Ramadhani &nbsp; | &nbsp; Last Updated: Apr 26, 2025 &nbsp; | &nbsp;
+        <span class="uptime-status">●</span> Uptime Status
+      </div>
+      <a href="#home" class="scroll-top">↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
