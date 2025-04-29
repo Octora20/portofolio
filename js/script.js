@@ -1,16 +1,6 @@
-// Animate skill bars
-window.addEventListener("load", () => {
-    const bars = document.querySelectorAll(".fill");
-    bars.forEach((bar) => {
-      const percent = bar.dataset.percent;
-      if (percent) {
-        setTimeout(() => {
-          bar.style.width = percent;
-          bar.textContent = percent;
-        }, 300);
-      }
-    });
-  });
+
+
+
   
   // Form handler
   const form = document.getElementById("contactForm");
@@ -74,4 +64,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     observer.observe(el);
   });
 
+// Animate skill bars
+window.addEventListener("load", () => {
+  const bars = document.querySelectorAll(".fill");
   
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        const percent = bar.dataset.percent;
+        if (percent) {
+          setTimeout(() => {
+            bar.style.width = percent;
+            bar.textContent = percent;
+          }, 300);
+        }
+        observer.unobserve(bar);  // Stop observing after the animation starts
+      }
+    });
+  }, { threshold: 0.1 });
+
+  bars.forEach(bar => observer.observe(bar));
+});
