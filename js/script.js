@@ -86,3 +86,48 @@ window.addEventListener("load", () => {
 
   bars.forEach(bar => observer.observe(bar));
 });
+
+
+const memoryImages = [
+  "assets/mem1.jpg",
+  "assets/mem2.jpg",
+  "assets/mem3.jpg",
+  "assets/mem4.jpg",
+  "assets/mem5.jpg",
+  "assets/mem6.jpg",
+  "assets/mem7.jpg",
+  "assets/mem8.jpg"
+];
+
+const track = document.getElementById('memoryTrack');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+
+memoryImages.forEach(src => {
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = 'Memory Image';
+  img.addEventListener('click', () => {
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+  });
+  track.appendChild(img);
+});
+
+// Duplikat gambar untuk loop seamless
+memoryImages.forEach(src => {
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = 'Memory Image';
+  img.addEventListener('click', () => {
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+  });
+  track.appendChild(img);
+});
+
+// Tutup lightbox saat diklik
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+  lightboxImg.src = ''; // Reset src untuk menghindari flicker
+});
